@@ -32,13 +32,14 @@ Los archivos requeridos para que este módulo funcione son:
 
 ## Paso 2: Instalación en el Servidor (AzerothCore)
 
-Para que el emulador reconozca que el Draenei puede ser Druida, necesita leer las tablas actualizadas.
+Para que el emulador reconozca que el Draenei puede ser Druida, necesitas instalar el módulo, compilarlo y actualizar tus tablas.
 
-1. Toma los archivos DBC ya modificados por el script (`CharBaseInfo.dbc`, `CharStartOutfit.dbc`, `SkillLineAbility.dbc`).
-2. Copia estos archivos dentro de la carpeta de datos de AzerothCore: 
-   `bin/Data/dbc/` (o `data/dbc/` según la estructura de tu compilación).
-3. Reinicia tu servidor (`worldserver`) para que cargue los nuevos DBCs en memoria.
-
+1. Descarga o clona este repositorio directamente dentro del directorio `modules/` de tu código fuente de AzerothCore.
+2. **Recompila el servidor:** Vuelve a ejecutar CMake y compila tu proyecto (con `make` en Linux o Visual Studio en Windows). Esto es indispensable para que el núcleo registre el módulo y prepare la inyección de la base de datos.
+3. Toma los archivos DBC ya modificados por el script (`CharBaseInfo.dbc`, `CharStartOutfit.dbc`, `SkillLineAbility.dbc`).
+4. Copia estos archivos dentro de la carpeta de datos de tu servidor ya compilado: 
+   `bin/Data/dbc/` (o `data/dbc/` según la estructura de tu instalación).
+5. Inicia tu servidor (`worldserver`). Al arrancar, el sistema inyectará el parche SQL automáticamente y cargará los nuevos DBCs en memoria.
 ---
 
 ## Paso 3: Instalación en el Cliente
