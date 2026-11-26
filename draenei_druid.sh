@@ -9,7 +9,7 @@ echo "=== 1. Verificando e Instalando mpqcli ==="
 if ! command -v mpqcli &> /dev/null; then
     echo "[!] mpqcli no encontrado. Instalando mediante el script oficial..."
     # Se utiliza el comando oficial de instalación rápida para Linux
-    curl -fsSL https://raw.githubusercontent.com/thegraydot/mpqcli/main/scripts/install.sh | bash
+    curl -fsSL https://github.com/thegraydot/mpqcli/releases/latest/download/install.sh | bash
     
     # Refresca el PATH en caso de que el instalador coloque el binario en ~/.local/bin
     export PATH="$HOME/.local/bin:$PATH"
