@@ -35,7 +35,7 @@ echo "=== 3. Preparando la estructura del cliente ==="
 mkdir -p "$PATCH_DIR/DBFilesClient"
 
 # Copia los archivos .dbc al directorio correcto en lugar de moverlos
-for dbc in CharBaseInfo.dbc CharStartOutfit.dbc SkillLineAbility.dbc; do
+for dbc in CharBaseInfo.dbc CharStartOutfit.dbc SkillLineAbility.dbc SkillRaceClassInfo.dbc; do
     if [ -f "$dbc" ]; then
         cp "$dbc" "$PATCH_DIR/DBFilesClient/"
         echo "  -> Copiado $dbc a $PATCH_DIR/DBFilesClient/"

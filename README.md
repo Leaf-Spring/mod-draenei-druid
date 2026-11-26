@@ -8,12 +8,13 @@ Los archivos requeridos para que este módulo funcione son:
 * `CharBaseInfo.dbc`
 * `CharStartOutfit.dbc`
 * `SkillLineAbility.dbc`
+* `SkillRaceClassInfo.dbc`
 
 ---
 
 ## Paso 1: Parcheo y Creación del Archivo MPQ
 
-1. Coloca tus 3 archivos DBC originales limpios en el mismo directorio donde se encuentran los scripts de instalación.
+1. Coloca tus 4 archivos DBC originales limpios en el mismo directorio donde se encuentran los scripts de instalación.
 2. Abre tu terminal y otorga permisos de ejecución al script principal:
 
        chmod +x draenei_druid.sh
@@ -36,7 +37,7 @@ Para que el emulador reconozca que el Draenei puede ser Druida, necesitas instal
 
 1. Descarga o clona este repositorio directamente dentro del directorio `modules/` de tu código fuente de AzerothCore.
 2. **Recompila el servidor:** Vuelve a ejecutar CMake y compila tu proyecto (con `make` en Linux o Visual Studio en Windows). Esto es indispensable para que el núcleo registre el módulo y prepare la inyección de la base de datos.
-3. Toma los archivos DBC ya modificados por el script (`CharBaseInfo.dbc`, `CharStartOutfit.dbc`, `SkillLineAbility.dbc`).
+3. Toma los archivos DBC ya modificados por el script (`CharBaseInfo.dbc`, `CharStartOutfit.dbc`, `SkillLineAbility.dbc`, `SkillRaceClassInfo.dbc`).
 4. Copia estos archivos dentro de la carpeta de datos de tu servidor ya compilado: 
    `bin/Data/dbc/` (o `data/dbc/` según la estructura de tu instalación).
 5. Inicia tu servidor (`worldserver`). Al arrancar, el sistema inyectará el parche SQL automáticamente y cargará los nuevos DBCs en memoria.
