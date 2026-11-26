@@ -53,7 +53,7 @@ if [ -d "$PATCH_DIR/DBFilesClient" ]; then
     fi
     
     # Empaqueta la carpeta usando mpqcli create
-    mpqcli create "$PATCH_DIR"
+    mpqcli create "$PATCH_FILE" "$PATCH_DIR"
     
     echo "=== [+] PROCESO COMPLETADO ==="
     echo "Guarda $PATCH_FILE en la carpeta Data/ de tu cliente World of Warcraft 3.3.5a."
